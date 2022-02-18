@@ -1,0 +1,13 @@
+{
+  "dependencies": {
+    "@types/jquery": "^3.5.13",
+    "testcafe": "^1.18.2"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.17.2"
+  },
+  "scripts": {
+    "compare": "npx playwright test --config './testcafe-vs-playwright/playwright.config.ts'",
+    "converter": "npx playwright test --config='./converter-testcafe-playwright/playwright.config.ts'"
+  }
+}

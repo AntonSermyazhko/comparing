@@ -3,9 +3,9 @@
 import { test, expect, Page } from '@playwright/test';
 import url from '../../helpers/getPageUrl';
 
-const iterationCount = 10;
 
-test.describe('1 page multiple tests', () => {
+// TODO comvert
+test.skip('1 page multiple tests', () => {
   let page: Page;
 
   test.beforeAll(async ({ browser }) => {
@@ -59,7 +59,7 @@ test.describe('1 page multiple tests', () => {
     });
   });
 
-  for (let i = 0; i < iterationCount; ++i) {
+  for (let i = 0; i < 100; ++i) {
     test(`basic test ${i}`, async () => {
       const appointments = page.locator('.dx-scheduler-appointment');
       await appointments.waitFor({ state: 'visible', timeout: 200 });
